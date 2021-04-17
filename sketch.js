@@ -9,10 +9,10 @@ let myImage;
 let c;
 
 function setup() {
-  createCanvas(600, 600);
-  background(220);
+  createCanvas(600, 400);
+  background(myImage);
   noStroke();
-  c = addImage.get(0, 360);
+  c = myImage.get(0, 360);
   fill(c)
   ;
 
@@ -34,7 +34,7 @@ function draw() {
   fill(c);
   rectMode(CENTER);
   rect(mouseX, mouseY, 10, 10);
-}
+  }
 }
 
 
@@ -75,3 +75,10 @@ function keyTyped(){
 
   return false;
 }
+
+function preload() {
+  myImage = loadImage('imgAdd-button');
+}
+
+
+
