@@ -29,11 +29,12 @@ function setup() {
 function draw() {
 
   //background(myImage);
+  if (mouseIsPressed){
   c = addImage.get(mouseY, mouseX);
   fill(c);
   rectMode(CENTER);
   rect(mouseX, mouseY, 10, 10);
-
+}
 }
 
 
