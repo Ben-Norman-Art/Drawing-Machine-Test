@@ -1,0 +1,38 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  margin: auto;
+  display: block;
+  border: 5px, solid black;
+  padding: 20px;
+}
+h1 {
+  font-family: bahnschrift;
+  font-size: 50px;
+  text-align: center;
+}
+h2 {
+  font-family: bahnschrift;
+  font-size: 20px;
+  text-align: center;
+}
+p {
+  font-family: bahnschrift;
+  font-size: 20px;
+  text-align: center;
+}
+input {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+button {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
