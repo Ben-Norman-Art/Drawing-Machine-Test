@@ -77,5 +77,5 @@ function keyTyped(){
 }
 
 function preload() {
-  myImage = loadImage('assets/node-mech-2.jpg');
+  myImage = addImage();
 }
