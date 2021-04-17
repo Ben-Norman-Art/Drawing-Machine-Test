@@ -10,13 +10,12 @@ let myImage;
 let c;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(600, 400);
   background(myImage);
   noStroke();
   c = myImage.get(0, 360);
-  fill(c);
-
-  strokeWeight(1);
+  fill(c)
+  ;
 
   input = createFileInput(handleFile);
   input.parent('upload-button');
@@ -30,7 +29,7 @@ function setup() {
 
 function draw() {
 
-  if (mouseIsPressed) {
+  //background(myImage);
   c = myImage.get(mouseY, mouseX);
   fill(c);
   rectMode(CENTER);
@@ -38,7 +37,7 @@ function draw() {
 
 }
 
-}
+
 function handleFile(file) {
   print(file);
   if (file.type === 'image') {
@@ -77,4 +76,6 @@ function keyTyped(){
   return false;
 }
 
-
+function preload() {
+  myImage = loadImage('assets/node-mech-2.jpg');
+}
