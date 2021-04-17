@@ -9,12 +9,11 @@ let myImage;
 let c;
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(600, 400);
   background(220);
   noStroke();
-  c = addImage.get(0, 360);
-  fill(c)
-  ;
+  c = myImage.get(0, 360);
+  fill(c);
 
   input = createFileInput(handleFile);
   input.parent('upload-button');
@@ -29,12 +28,12 @@ function setup() {
 function draw() {
 
   //background(myImage);
-  if (mouseIsPressed){
-  c = addImage.get(mouseY, mouseX);
-  fill(c);
-  rectMode(CENTER);
-  rect(mouseX, mouseY, 10, 10);
-}
+  if (mouseIsPressed) {
+    c = addImage.get(mouseY, mouseX);
+    fill(c);
+    rectMode(CENTER);
+    rect(mouseX, mouseY, 10, 10);
+  }
 }
 
 
@@ -52,26 +51,30 @@ function handleFile(file) {
 //Function for drawing the image onto the canvas.
 function addImage() {
   reX = (img.width) / (img.height);
-  resizeCanvas(reX*500, 500);
+  resizeCanvas(reX * 500, 500);
   if (img) {
     image(img, 0, 0, width, height);
   }
 }
 
 
-function keyTyped(){
+function keyTyped() {
 
   //console.log(`Key s is being Typed`)
 
-  if (key == 's'){
-  saveCanvas(`fileName`, `png`);
+  if (key == 's') {
+    saveCanvas(`fileName`, `png`);
   }
-  if (key == 'c'){
-  clear();
-  background(220);
-}
+  if (key == 'c') {
+    clear();
+    background(220);
+  }
 
 
 
   return false;
+}
+
+function preload() {
+  myImage = loadImage('imgAdd-button');
 }
