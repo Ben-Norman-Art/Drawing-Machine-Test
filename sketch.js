@@ -5,14 +5,13 @@ let imgAdd;
 let imgSave;
 let imgReset;
 let reX;
-let myImage;
 let c;
 
 function setup() {
   createCanvas(600, 400);
   background(220);
   noStroke();
-  c = myImage.get(0, 360);
+  c = addImage.get(0, 360);
   fill(c);
 
   input = createFileInput(handleFile);
@@ -73,8 +72,4 @@ function keyTyped() {
 
 
   return false;
-}
-
-function preload() {
-  myImage = loadImage('imgAdd-button');
 }
