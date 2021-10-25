@@ -29,7 +29,7 @@ function draw() {
   c = myImage.get(mouseX, mouseY);
   fill(c);
   rectMode(CENTER);
-  rect(mouseX, mouseY, 10, 10);
+  rect(mouseX, mouseY, 25, 25);
   }
 }
 
